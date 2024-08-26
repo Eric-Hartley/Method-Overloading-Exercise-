@@ -25,7 +25,7 @@ namespace MethodOverloading
             {
                 return answer + " dollar";
             }
-            else if (isChecked == true && answer < 1 & answer > -1)
+            else if (isChecked == true && answer < 1 && answer > -1)
             {
                 return $"{answer} dollars";
             }
@@ -45,14 +45,24 @@ namespace MethodOverloading
         
         static void Main(string[] args)
         {
-            //Change the values here
-            var number1 = 0;
-            var number2 = 0;
-            bool isChecked = false;
-            // ----------------
+            // Integer values
+            var int1 = 5;
+            var int2 = 2;
 
-            var answer = Add(number1, number2, isChecked);
-            Console.WriteLine(answer);
+            // Double values
+            var double1 = 1.5;
+            var double2 = 3.8;
+
+            // Checked
+            bool isChecked = true;
+
+            // Adding each type together
+            var addInts = Add(int1, int2, isChecked);
+            var addDoubles = Add(double1, double2);
+
+
+            Console.WriteLine(addInts);
+            Console.WriteLine(addDoubles);
         }
     }
 }
